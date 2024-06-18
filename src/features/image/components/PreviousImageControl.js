@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { switchToPreviousBackgroundImage } from "../backgroundImageSlice";
+import { switchToPreviousBackgroundImage } from "../imageSlice";
 
 const PreviousImageControl = () => {
   const dispatch = useDispatch();
