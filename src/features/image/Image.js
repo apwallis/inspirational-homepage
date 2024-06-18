@@ -5,7 +5,7 @@ import { selectImage } from "./imageSlice";
 
 export default function Image() {
     const imageUrl = useSelector(selectImage);
-  
+
     return (
         <div style={{ 
             backgroundImage: `url("${imageUrl}")` 
@@ -13,4 +13,4 @@ export default function Image() {
             
         </div>
     );
-};
+}
