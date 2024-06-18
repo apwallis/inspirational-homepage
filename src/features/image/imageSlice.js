@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const inspirationalImageSlice = createSlice({
-  name: "inspirationalImage",
+export const imageSlice = createSlice({
+  name: "image",
   initialState: {
     imageUrls: [
         'https://images.unsplash.com/photo-1433086966358-54859d0ed716?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMDI0NTh8MHwxfHNlYXJjaHwxfHxuYXR1cmV8ZW58MHx8fHwxNzE4NzAxNjUyfDA&ixlib=rb-4.0.3&q=85',
@@ -14,7 +14,7 @@ export const inspirationalImageSlice = createSlice({
   },
   reducers: {
     incrementImageIndex: (state, action) => {
-        const numberOfImages = state.imageUrls.length - 1; 
+        const numberOfImages = state.imageUrls.length - 1; // To fix length for correct index
         if (state.currentImageIndex === numberOfImages) {
             state.currentImageIndex = 0;
         } else {
@@ -32,6 +32,6 @@ export const inspirationalImageSlice = createSlice({
   },
 });
 
-export const { incrementImageIndex, decrementImageIndex } = inspirationalImageSlice.actions;
-export const selectImage = (state) => state.inspirationalImage.imageUrls[state.inspirationalImage.currentImageIndex];
-export default topicsSlice.reducer;
+export const { incrementImageIndex, decrementImageIndex } = imageSlice.actions;
+export const selectImage = (state) => state.image.imageUrls[state.image.currentImageIndex];
+export default imageSlice.reducer;
