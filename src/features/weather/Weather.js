@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const Weather = () => {
-  const { metadata, temperature, city, state } = useSelector(
+  const { metadata, temperature } = useSelector(
     (state) => state.weather
   );
   
