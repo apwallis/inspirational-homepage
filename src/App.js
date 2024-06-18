@@ -4,6 +4,7 @@ import Image from './features/image/Image'
 import NextImageControl from './features/image/components/NextImageControl';
 import PreviousImageControl from './features/image/components/PreviousImageControl';
 import Quote from './features/quote/Quote';
+import Weather from './features/weather/Weather';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Image />
         <header>
           {/* <Error /> */}
-          {/* <Weather /> */}            
+          <Weather />            
         </header>
         <aside className="left-wallpaper-control wallpaper-control">
           <NextImageControl />
