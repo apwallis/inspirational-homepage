@@ -13,7 +13,7 @@ export const imageSlice = createSlice({
     currentImageIndex: 0,
   },
   reducers: {
-    incrementImageIndex: (state, action) => {
+    switchToNextBackgroundImage: (state, action) => {
         const numberOfImages = state.imageUrls.length - 1; // To fix length for correct index
         if (state.currentImageIndex === numberOfImages) {
             state.currentImageIndex = 0;
@@ -21,7 +21,7 @@ export const imageSlice = createSlice({
             state.currentImageIndex = state.currentImageIndex + 1;
         }
     },
-    decrementImageIndex: (state, action) => {
+    switchToPreviousBackgroundImage: (state, action) => {
         const numberOfImages = state.imageUrls.length - 1;
         if (state.currentImageIndex === 0) {
             state.currentImageIndex = numberOfImages;
@@ -32,6 +32,6 @@ export const imageSlice = createSlice({
   },
 });
 
-export const { incrementImageIndex, decrementImageIndex } = imageSlice.actions;
+export const { switchToNextBackgroundImage, switchToPreviousBackgroundImage } = imageSlice.actions;
 export const selectImage = (state) => state.image.imageUrls[state.image.currentImageIndex];
 export default imageSlice.reducer;
