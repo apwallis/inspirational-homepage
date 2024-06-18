@@ -8,9 +8,10 @@ export default function Image() {
 
     return (
         <div style={{ 
-            backgroundImage: `url("${imageUrl}")` 
+            backgroundImage: `url(${imageUrl})` 
           }}>
-            
+            <image />
+            Hello World
         </div>
     );
 }
