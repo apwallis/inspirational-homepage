@@ -9,7 +9,8 @@ export default function Image() {
     return (
         <div style={{ 
             backgroundImage: `url(${imageUrl})`,
-            width:'800px' 
+            width: screen.availWidth,
+            height: screen.availHeight, 
           }}>
         
             Hello World
