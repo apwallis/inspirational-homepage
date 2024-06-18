@@ -5,7 +5,7 @@ import { selectImage } from "./imageSlice";
 
 export default function Image() {
     const imageUrl = useSelector(selectImage);
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
 
     return (
         <div id="background-image-container">

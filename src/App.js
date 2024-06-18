@@ -3,6 +3,7 @@ import './App.css';
 import Image from './features/image/Image'
 import NextImageControl from './features/image/components/NextImageControl';
 import PreviousImageControl from './features/image/components/PreviousImageControl';
+import Quote from './features/quote/Quote';
 
 function App() {
   return (
@@ -23,9 +24,8 @@ function App() {
           <PreviousImageControl />
         </aside>
         <footer>
-          {/* <Quote /> */}
+          <Quote/>
         </footer>
-    
       </header>
     </div>
   );
