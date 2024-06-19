@@ -1,10 +1,16 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getWeather } from "./weatherSlice";
 
 const Weather = () => {
-  const { metadata, temperature } = useSelector(
+  const { metadata, temperature, city, state } = useSelector(
     (state) => state.weather
   );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getWeather({ city, state }));
+  }, [dispatch, city, state]);
   
   return (
     <div className="weather">

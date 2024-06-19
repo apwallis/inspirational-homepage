@@ -1,18 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import openWeatherApi from '../../api/openWeatherApi/index';
 
+export const getWeather = createAsyncThunk(
+  "weather/getWeather",
+  ({ city, state }) => openWeatherApi.getWeather(city, state)
+);
 
 export const weatherSlice = createSlice({
   name: "weather",
   initialState: {
     city: "Aberyswyth",
-    state: "Ceredigion",
-    metadata: {
-        id: 804,
-        main: 'Clouds',
-        description: 'overcast clouds',
-        icon: '04n'
-      },
-    temperature: "15.3"
+    state: "GB",
+    metadata: {},
+    temperature: "",
   },
   reducers: {
     setCity: (state, action) => {
@@ -22,6 +22,12 @@ export const weatherSlice = createSlice({
       state.state = action.payload;
     }
   },
+  extraReducers: {
+    [getWeather.fulfilled]: (state, action) => {
+      state.metadata = action.payload.weatherMetadata;
+      state.temperature = action.payload.temperature;
+    }
+  }
 });
 
 export const { setCity, setState } = weatherSlice.actions;
