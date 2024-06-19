@@ -9,9 +9,14 @@ export const getWeather = createAsyncThunk(
 export const weatherSlice = createSlice({
   name: "weather",
   initialState: {
-    city: "Aberyswyth",
-    state: "GB",
-    metadata: {},
+    city: "Seattle",
+    state: "Washington",
+    metadata: {
+      id: 800,
+      main: 'Clear',
+      description: 'clear sky',
+      icon: '01d'
+    },
     temperature: "",
   },
   reducers: {
