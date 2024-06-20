@@ -6,6 +6,7 @@ import PreviousImageControl from './features/image/components/PreviousImageContr
 import Quote from './features/quote/Quote';
 import Weather from './features/weather/Weather';
 import Goals from './features/goals/Goals';
+import Error from "./features/error/Error";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <header className="App-header">
         <Image />
         <header>
-          {/* <Error /> */}
+          <Error />
           <Weather />            
         </header>
         <aside className="left-wallpaper-control wallpaper-control">

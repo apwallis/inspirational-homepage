@@ -11,7 +11,7 @@ const Weather = () => {
   useEffect(() => {
     dispatch(getWeather({ city, state }));
   }, [dispatch, city, state]);
-  
+
   return (
     <div className="weather">
       <div className="temperature-container">
