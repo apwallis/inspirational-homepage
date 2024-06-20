@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 import Image from './features/image/Image'
 import NextImageControl from './features/image/components/NextImageControl';
 import PreviousImageControl from './features/image/components/PreviousImageControl';
@@ -18,13 +18,13 @@ function App() {
           <Weather />            
         </header>
         <aside className="left-wallpaper-control wallpaper-control">
-          <NextImageControl />
+          <PreviousImageControl />
         </aside>
         <main>
           <Goals />
         </main>
         <aside className="right-wallpaper-control wallpaper-control">
-          <PreviousImageControl />
+          <NextImageControl />
         </aside>
         <footer>
           <Quote/>
