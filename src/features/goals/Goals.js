@@ -22,7 +22,7 @@ const Goals = () => {
   return (
     <>
       <div id="goals" className="surface">
-        <h2>Career Tasks:</h2>
+        <h2>Career Goals:</h2>
 
         <form onSubmit={onFormSubmit}>
           <input

@@ -20,6 +20,7 @@ const Weather = () => {
           alt=""
         />
         <div className="weather-text">
+          <p className="location">{city}, {state}</p>
           <p className="temperature">{temperature}°C</p>
           <p className="weather-description">{metadata.description}</p>
         </div>
