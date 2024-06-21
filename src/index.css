@@ -138,11 +138,11 @@ footer {
   width: 85%;
 }
 
-#goals {
+#journal {
   margin-bottom: 24px;
 }
 
-.goals-input {
+.journal-input {
   width: 100%;
   padding-top: 4px;
   display: block;
@@ -292,8 +292,6 @@ p {
   opacity: 0.5;
   transition: opacity 0.1s ease-in;
 }
-
-button {}
 
 .wallpaper-control button:hover {
   opacity: 1;
