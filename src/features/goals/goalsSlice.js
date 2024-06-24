@@ -4,8 +4,9 @@ export const goalsSlice = createSlice({
   name: "goals",
   initialState: {
     entries: [
-      { text: "Finish Project", isDone: false },
-      { text: "Finish Course", isDone: false },
+      { text: "Implement Image API", isDone: true },
+      { text: "Implement Weather API", isDone: true },
+      { text: "Implement Quote API", isDone: true },
       { text: "Find out what's next", isDone: false },
       { text: "Profit", isDone: false }
     ],

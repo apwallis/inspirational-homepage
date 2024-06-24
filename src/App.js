@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Image from './features/image/Image'
+import Image from './features/image/Image';
 import NextImageControl from './features/image/components/NextImageControl';
 import PreviousImageControl from './features/image/components/PreviousImageControl';
 import Quote from './features/quote/Quote';

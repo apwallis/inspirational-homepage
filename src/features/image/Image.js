@@ -1,14 +1,24 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { selectImage } from "./imageSlice";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getImages } from "./imageSlice";
 
 
-export default function Image() {
-    const imageUrl = useSelector(selectImage);
+const Image = () => {
+  const { imageUrls, currentImageIndex } = useSelector(
+    (state) => state.image
+  );
 
-    return (
-        <div id="background-image-container">
-          <img src={imageUrl} alt="" id="background-image" />
-        </div>
-      );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getImages());
+  }, [dispatch]);
+
+  return (
+    <div id="background-image-container">
+      <img src={imageUrls[currentImageIndex]} alt="" id="background-image" />
+    </div>
+  );
 }
+
+export default Image;
