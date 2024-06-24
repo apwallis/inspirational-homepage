@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getWeather } from "./weatherSlice";
 
 const Weather = () => {
-  const { metadata, temperature, city, state } = useSelector(
+  const { metadata, temperature, pressure, humidity, city, state } = useSelector(
     (state) => state.weather
   );
   const dispatch = useDispatch();
@@ -23,6 +23,8 @@ const Weather = () => {
           <p className="location">{city}, {state}</p>
           <p className="temperature">{temperature}°C</p>
           <p className="weather-description">{metadata.description}</p>
+          <p className="pressure">Pressure: {pressure} hPa</p>
+          <p className="humidity">Humidity: {humidity}%</p>
         </div>
       </div>
     </div>

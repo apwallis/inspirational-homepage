@@ -12,7 +12,9 @@ export const weatherSlice = createSlice({
     city: "Aberystwyth",
     state: "UK",
     metadata: {},
-    temperature: ""
+    temperature: "",
+    pressure: "",
+    humidity: "",
   },
   reducers: {
     setCity: (state, action) => {
@@ -26,6 +28,8 @@ export const weatherSlice = createSlice({
     [getWeather.fulfilled]: (state, action) => {
       state.metadata = action.payload.weatherMetadata;
       state.temperature = action.payload.temperature;
+      state.pressure = action.payload.pressure;
+      state.humidity = action.payload.humidity;
     }
   }
 });

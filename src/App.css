@@ -35,9 +35,18 @@ body {
   padding-top: 8px;
 }
 
+.pressure {
+  font-size: 16px;
+  padding-top: 8px;
+}
+
+.humidity {
+  font-size: 16px;
+}
+
 .temperature-container {
   display: flex;
-  padding-right: 40px;
+  padding-right: 16px;
 }
 
 .weather {
@@ -119,9 +128,9 @@ main {
   grid-area: Main;
   display: flex;
   flex-direction: column;
-  padding-top: 64px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-top: 128px;
+  padding-left: 64px;
+  padding-right: 64px;
   align-items: center;
 }
 
